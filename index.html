@@ -3,169 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BB Mobile Valeting Services | Professional Auto Care Stanley</title>
+    <title>BB Mobile Valeting Services | Bruno Bergmanis</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        .glow { box-shadow: 0 0 20px rgba(6, 182, 212, 0.25); }
-        .gradient-border { border-image: linear-gradient(to right, #06b6d4, #3b82f6) 1; }
+        .glow-blue { box-shadow: 0 0 25px rgba(37, 99, 235, 0.3); }
+        .hero-bg { background: linear-gradient(180deg, rgba(2, 6, 23, 0.85) 0%, rgba(2, 6, 23, 0.98) 100%), url('https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=1000') center/cover; }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen pb-12">
 
     <!-- Header / Brand Banner -->
-    <header class="bg-slate-900/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50 px-4 py-4">
+    <header class="bg-slate-900/90 backdrop-blur-md border-b border-blue-900/50 sticky top-0 z-50 px-4 py-3.5">
         <div class="max-w-md mx-auto flex justify-between items-center">
-            <div>
-                <h1 class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-                    <span class="text-cyan-400"><i class="fa-solid font-black fa-car-side"></i></span> BB VALETING
-                </h1>
-                <p class="text-xs text-slate-400">Mobile Detailing & Valeting • Stanley (DH9)</p>
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-blue-600/20 border border-blue-500/40 flex items-center justify-center font-black text-xl text-blue-400 tracking-tighter">
+                    B3
+                </div>
+                <div>
+                    <h1 class="text-sm font-bold tracking-tight text-white leading-none">BRUNO BERGMANIS</h1>
+                    <p class="text-[11px] text-blue-400 font-medium">MOBILE VALETING SERVICES</p>
+                </div>
             </div>
-            <span class="bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 text-xs px-2.5 py-1 rounded-full flex items-center gap-1 font-semibold">
-                <i class="fa-solid fa-star text-amber-400 text-[10px]"></i> 5.0 Rated
-            </span>
+            <a href="tel:07400789480" class="bg-blue-600/20 border border-blue-500/40 text-blue-400 text-xs px-3 py-1.5 rounded-full flex items-center gap-1.5 font-semibold hover:bg-blue-600/30 transition-all">
+                <i class="fa-solid fa-phone text-[10px]"></i> Call Us
+            </a>
         </div>
     </header>
 
-    <main class="max-w-md mx-auto px-4 mt-6 space-y-6">
+    <main class="max-w-md mx-auto px-4 mt-4 space-y-5">
 
-        <!-- Hero Section -->
-        <div class="bg-gradient-to-br from-slate-900 via-slate-900 to-cyan-950/40 p-5 rounded-2xl border border-slate-800 glow">
-            <span class="text-cyan-400 text-xs font-semibold tracking-wider uppercase mb-1 block">Mobile Showroom Shine</span>
-            <h2 class="text-xl font-bold text-white leading-tight">We Bring The Studio Clean To Your Doorstep</h2>
-            <p class="text-slate-400 text-xs mt-2 leading-relaxed">No hassle, no queues. Select your car size below for instant pricing and secure deposit booking.</p>
+        <!-- Hero Card -->
+        <div class="hero-bg p-5 rounded-2xl border border-blue-900/40 glow-blue text-center space-y-2">
+            <p class="text-blue-400 text-[11px] font-bold uppercase tracking-widest">We Bring The Showroom To You</p>
+            <h2 class="text-2xl font-black text-white uppercase tracking-tight leading-none">Professional Car Care,<br><span class="text-blue-500">At Your Doorstep.</span></h2>
+            <div class="pt-2 flex justify-center gap-3 text-[10px] text-slate-300 border-t border-slate-800/80 mt-3">
+                <span><i class="fa-solid fa-house text-blue-400"></i> We Come To You</span>
+                <span><i class="fa-solid fa-shield-halved text-blue-400"></i> Fully Insured</span>
+                <span><i class="fa-solid fa-sparkles text-blue-400"></i> Hand Wax Standard</span>
+            </div>
         </div>
 
-        <!-- Step 1: Choose Vehicle Size -->
-        <div class="space-y-3">
-            <label class="text-sm font-semibold text-slate-300 flex items-center justify-between">
-                <span>1. Select Vehicle Size</span>
-                <span class="text-xs text-cyan-400 font-normal">Pricing adjusts automatically</span>
+        <!-- Step 1: Vehicle Size -->
+        <div class="space-y-2.5">
+            <label class="text-xs font-bold uppercase tracking-wider text-slate-400 flex justify-between items-center">
+                <span>1. Choose Vehicle Size</span>
+                <span class="text-blue-400 text-[11px] normal-case">Adjusts pricing dynamically</span>
             </label>
             <div class="grid grid-cols-3 gap-2">
-                <button onclick="selectVehicle('small', 1.0)" id="btn-small" class="size-btn border-2 border-cyan-500 bg-cyan-950/30 text-cyan-400 p-3 rounded-xl flex flex-col items-center justify-center transition-all">
-                    <i class="fa-solid fa-car text-lg mb-1"></i>
+                <button onclick="selectVehicle('small', 1.0)" id="btn-small" class="size-btn border-2 border-blue-500 bg-blue-950/40 text-blue-400 p-3 rounded-xl flex flex-col items-center justify-center transition-all">
+                    <i class="fa-solid fa-car text-base mb-1"></i>
                     <span class="text-xs font-bold">Small</span>
-                    <span class="text-[10px] opacity-75">Hatchback</span>
+                    <span class="text-[10px] text-slate-400">Hatchback</span>
                 </button>
-                <button onclick="selectVehicle('medium', 1.2)" id="btn-medium" class="size-btn border border-slate-800 bg-slate-900 text-slate-400 p-3 rounded-xl flex flex-col items-center justify-center transition-all">
-                    <i class="fa-solid fa-car-side text-lg mb-1"></i>
+                <button onclick="selectVehicle('medium', 1.15)" id="btn-medium" class="size-btn border border-slate-800 bg-slate-900 text-slate-400 p-3 rounded-xl flex flex-col items-center justify-center transition-all">
+                    <i class="fa-solid fa-car-side text-base mb-1"></i>
                     <span class="text-xs font-bold">Medium</span>
-                    <span class="text-[10px] opacity-75">Saloon/Estate</span>
+                    <span class="text-[10px] text-slate-500">Saloon/Estate</span>
                 </button>
-                <button onclick="selectVehicle('large', 1.4)" id="btn-large" class="size-btn border border-slate-800 bg-slate-900 text-slate-400 p-3 rounded-xl flex flex-col items-center justify-center transition-all">
-                    <i class="fa-solid fa-truck-pickup text-lg mb-1"></i>
+                <button onclick="selectVehicle('large', 1.3)" id="btn-large" class="size-btn border border-slate-800 bg-slate-900 text-slate-400 p-3 rounded-xl flex flex-col items-center justify-center transition-all">
+                    <i class="fa-solid fa-truck-pickup text-base mb-1"></i>
                     <span class="text-xs font-bold">Large</span>
-                    <span class="text-[10px] opacity-75">SUV / 4x4</span>
+                    <span class="text-[10px] text-slate-500">SUV / 4x4</span>
                 </button>
             </div>
         </div>
 
-        <!-- Step 2: Choose Package -->
-        <div class="space-y-3">
-            <label class="text-sm font-semibold text-slate-300">2. Select Valeting Package</label>
+        <!-- Step 2: Select Package -->
+        <div class="space-y-2.5">
+            <label class="text-xs font-bold uppercase tracking-wider text-slate-400">2. Select Valet Service</label>
             
-            <div onclick="selectPackage('maintenance', 40)" id="pkg-maintenance" class="pkg-card cursor-pointer border-2 border-cyan-500 bg-slate-900 p-4 rounded-2xl transition-all">
+            <div onclick="selectPackage('exterior', 18)" id="pkg-exterior" class="pkg-card cursor-pointer border-2 border-blue-500 bg-slate-900 p-4 rounded-xl transition-all">
                 <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="font-bold text-white text-sm">Mini Valet Maintenance</h3>
-                        <p class="text-xs text-slate-400 mt-1">Safe wash, wheel clean, glass polish, vacuum & dash wipe down.</p>
-                    </div>
-                    <span class="text-cyan-400 font-bold text-base price-display" data-base="40">£40</span>
-                </div>
-            </div>
-
-            <div onclick="selectPackage('deep', 70)" id="pkg-deep" class="pkg-card cursor-pointer border border-slate-800 bg-slate-900 p-4 rounded-2xl transition-all">
-                <div class="flex justify-between items-start">
-                    <div>
+                    <div class="space-y-1">
                         <div class="flex items-center gap-2">
-                            <h3 class="font-bold text-white text-sm">Full Deep Clean Valet</h3>
-                            <span class="bg-amber-500/10 text-amber-400 text-[10px] px-2 py-0.5 rounded font-semibold border border-amber-500/20">Popular</span>
+                            <i class="fa-solid fa-droplet text-blue-400 text-sm"></i>
+                            <h3 class="font-bold text-white text-sm">Exterior Wash</h3>
                         </div>
-                        <p class="text-xs text-slate-400 mt-1">Full interior shampoo/steam, liquid wax protection, iron fallout treatment.</p>
+                        <p class="text-[11px] text-slate-400 leading-snug">Pre-wash snow foam, safe 2-bucket hand wash, deep wheel & arch clean, hand wax & door shuts.</p>
                     </div>
-                    <span class="text-slate-300 font-bold text-base price-display" data-base="70">£70</span>
+                    <span class="text-blue-400 font-black text-lg ml-2 price-display" data-base="18">£18</span>
                 </div>
             </div>
 
-            <div onclick="selectPackage('ceramic', 120)" id="pkg-ceramic" class="pkg-card cursor-pointer border border-slate-800 bg-slate-900 p-4 rounded-2xl transition-all">
+            <div onclick="selectPackage('mini', 40)" id="pkg-mini" class="pkg-card cursor-pointer border border-slate-800 bg-slate-900 p-4 rounded-xl transition-all">
                 <div class="flex justify-between items-start">
-                    <div>
-                        <h3 class="font-bold text-white text-sm">Signature Ceramic Detail</h3>
-                        <p class="text-xs text-slate-400 mt-1">Single-stage paint polish, 12-month ceramic sealant, full leather restore.</p>
+                    <div class="space-y-1">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-car-rear text-blue-400 text-sm"></i>
+                            <h3 class="font-bold text-white text-sm">Mini Valet</h3>
+                            <span class="bg-blue-500/20 text-blue-400 border border-blue-500/30 text-[9px] px-1.5 py-0.5 rounded font-bold">POPULAR</span>
+                        </div>
+                        <p class="text-[11px] text-slate-400 leading-snug">Full exterior wash + interior vacuumed (incl. boot), windows cleaned inside & out, plastics & dash refreshed.</p>
                     </div>
-                    <span class="text-slate-300 font-bold text-base price-display" data-base="120">£120</span>
+                    <span class="text-slate-200 font-black text-lg ml-2 price-display" data-base="40">£40</span>
+                </div>
+            </div>
+
+            <div onclick="selectPackage('decon', 65)" id="pkg-decon" class="pkg-card cursor-pointer border border-slate-800 bg-slate-900 p-4 rounded-xl transition-all">
+                <div class="flex justify-between items-start">
+                    <div class="space-y-1">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-wand-magic-sparkles text-blue-400 text-sm"></i>
+                            <h3 class="font-bold text-white text-sm">Decontamination + Mini Valet</h3>
+                        </div>
+                        <p class="text-[11px] text-slate-400 leading-snug">Full exterior & interior valet plus iron fallout removal, clay bar treatment & mirror-finish hand wax polish.</p>
+                    </div>
+                    <span class="text-slate-200 font-black text-lg ml-2 price-display" data-base="65">£65</span>
                 </div>
             </div>
         </div>
 
-        <!-- Step 3: Add-Ons -->
-        <div class="space-y-3">
-            <label class="text-sm font-semibold text-slate-300">3. Optional Upgrades</label>
-            <div class="space-y-2">
-                <label class="flex items-center justify-between p-3 rounded-xl bg-slate-900 border border-slate-800 cursor-pointer">
-                    <span class="flex items-center gap-2 text-xs text-slate-300">
-                        <input type="checkbox" onchange="calculateTotal()" value="15" class="addon-checkbox rounded border-slate-700 bg-slate-800 text-cyan-500 focus:ring-0">
-                        Pet Hair Removal
-                    </span>
-                    <span class="text-xs text-slate-400 font-semibold">+£15</span>
-                </label>
-                <label class="flex items-center justify-between p-3 rounded-xl bg-slate-900 border border-slate-800 cursor-pointer">
-                    <span class="flex items-center gap-2 text-xs text-slate-300">
-                        <input type="checkbox" onchange="calculateTotal()" value="20" class="addon-checkbox rounded border-slate-700 bg-slate-800 text-cyan-500 focus:ring-0">
-                        Engine Bay Detail
-                    </span>
-                    <span class="text-xs text-slate-400 font-semibold">+£20</span>
-                </label>
-            </div>
-        </div>
-
-        <!-- Booking Summary & Deposit Calculator -->
-        <div class="bg-slate-900 p-5 rounded-2xl border border-cyan-500/30 space-y-4">
+        <!-- Booking Calculator Box -->
+        <div class="bg-slate-900 p-5 rounded-2xl border border-blue-600/40 space-y-4 shadow-xl">
             <div class="flex justify-between items-center pb-3 border-b border-slate-800">
                 <div>
-                    <p class="text-xs text-slate-400">Total Price Estimate</p>
-                    <p id="total-price" class="text-2xl font-black text-white">£40.00</p>
+                    <p class="text-[11px] text-slate-400">Total Price Estimate</p>
+                    <p id="total-price" class="text-2xl font-black text-white">£18.00</p>
                 </div>
                 <div class="text-right">
-                    <p class="text-xs text-cyan-400 font-semibold">Deposit Due Now (25%)</p>
-                    <p id="deposit-price" class="text-2xl font-black text-cyan-400">£10.00</p>
+                    <p class="text-[11px] text-blue-400 font-bold">Deposit To Reserve (25%)</p>
+                    <p id="deposit-price" class="text-2xl font-black text-blue-400">£4.50</p>
                 </div>
             </div>
 
-            <form onsubmit="handleBooking(event)" class="space-y-3">
-                <div>
-                    <input type="text" required placeholder="Your Name" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:border-cyan-500 outline-none">
-                </div>
-                <div>
-                    <input type="tel" required placeholder="Phone / WhatsApp Number" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:border-cyan-500 outline-none">
-                </div>
-                <div>
-                    <input type="text" required placeholder="Postcode / Address (Stanley area)" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:border-cyan-500 outline-none">
-                </div>
-                <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold py-3.5 rounded-xl shadow-lg shadow-cyan-500/20 text-sm transition-all flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-lock"></i> Reserve Slot & Pay Deposit
+            <form onsubmit="handleBooking(event)" class="space-y-2.5">
+                <input type="text" required placeholder="Your Name" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:border-blue-500 outline-none">
+                <input type="tel" required placeholder="Mobile / WhatsApp Number" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:border-blue-500 outline-none">
+                <input type="text" required placeholder="Location Postcode (e.g., DH9)" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-xs text-white placeholder-slate-500 focus:border-blue-500 outline-none">
+                
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-blue-600/30 text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 mt-2">
+                    <i class="fa-solid fa-lock"></i> Lock In Slot & Pay Deposit
                 </button>
             </form>
-            <p class="text-[10px] text-center text-slate-500">🔒 Demo built by DH9 Digital. Fully customizable booking flow.</p>
+            <p class="text-[10px] text-center text-slate-500">🔒 Interactive demo built for BB Mobile Valeting Services by DH9 Digital.</p>
+        </div>
+
+        <!-- Direct Contact Footer -->
+        <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800 text-center space-y-2 text-xs text-slate-400">
+            <p class="font-semibold text-slate-300">Need direct booking or advice?</p>
+            <div class="flex justify-center gap-4 text-blue-400 font-bold">
+                <a href="tel:07400789480"><i class="fa-solid fa-phone"></i> 07400 789480</a>
+                <a href="https://wa.me/447400789480" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
         </div>
 
     </main>
 
     <script>
         let selectedMultiplier = 1.0;
-        let selectedPackageBase = 40;
+        let selectedPackageBase = 18;
 
         function selectVehicle(size, multiplier) {
             selectedMultiplier = multiplier;
             document.querySelectorAll('.size-btn').forEach(btn => {
-                btn.classList.remove('border-cyan-500', 'bg-cyan-950/30', 'text-cyan-400');
-                btn.classList.add('border-slate-800', 'bg-slate-900', 'text-slate-400');
+                btn.classList.remove('border-2', 'border-blue-500', 'bg-blue-950/40', 'text-blue-400');
+                btn.classList.add('border', 'border-slate-800', 'bg-slate-900', 'text-slate-400');
             });
             const activeBtn = document.getElementById('btn-' + size);
-            activeBtn.classList.remove('border-slate-800', 'bg-slate-900', 'text-slate-400');
-            activeBtn.classList.add('border-cyan-500', 'bg-cyan-950/30', 'text-cyan-400');
+            activeBtn.classList.remove('border', 'border-slate-800', 'bg-slate-900', 'text-slate-400');
+            activeBtn.classList.add('border-2', 'border-blue-500', 'bg-blue-950/40', 'text-blue-400');
 
             updatePrices();
             calculateTotal();
@@ -174,12 +171,12 @@
         function selectPackage(id, basePrice) {
             selectedPackageBase = basePrice;
             document.querySelectorAll('.pkg-card').forEach(card => {
-                card.classList.remove('border-cyan-500');
-                card.classList.add('border-slate-800');
+                card.classList.remove('border-2', 'border-blue-500');
+                card.classList.add('border', 'border-slate-800');
             });
             const activeCard = document.getElementById('pkg-' + id);
-            activeCard.classList.remove('border-slate-800');
-            activeCard.classList.add('border-cyan-500');
+            activeCard.classList.remove('border', 'border-slate-800');
+            activeCard.classList.add('border-2', 'border-blue-500');
 
             calculateTotal();
         }
@@ -193,9 +190,6 @@
 
         function calculateTotal() {
             let total = selectedPackageBase * selectedMultiplier;
-            document.querySelectorAll('.addon-checkbox:checked').forEach(cb => {
-                total += parseFloat(cb.value);
-            });
             const deposit = total * 0.25;
 
             document.getElementById('total-price').innerText = '£' + total.toFixed(2);
