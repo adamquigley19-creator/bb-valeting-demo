@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BB Mobile Valeting Services | Professional Auto Care Stanley</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .glow { box-shadow: 0 0 20px rgba(6, 182, 212, 0.25); }
+        .gradient-border { border-image: linear-gradient(to right, #06b6d4, #3b82f6) 1; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen pb-12">
+
+    <!-- Header / Brand Banner -->
+    <header class="bg-slate-900/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-50 px-4 py-4">
+        <div class="max-w-md mx-auto flex justify-between items-center">
+            <div>
+                <h1 class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+                    <span class="text-cyan-400"><i class="fa-solid font-black fa-car-side"></i></span> BB VALETING
+                </h1>
+                <p class="text-xs text-slate-400">Mobile Detailing & Valeting • Stanley (DH9)</p>
+            </div>
+            <span class="bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 text-xs px-2.5 py-1 rounded-full flex items-center gap-1 font-semibold">
+                <i class="fa-solid fa-star text-amber-400 text-[10px]"></i> 5.0 Rated
+            </span>
+        </div>
+    </header>
+
+    <main class="max-w-md mx-auto px-4 mt-6 space-y-6">
+
+        <!-- Hero Section -->
+        <div class="bg-gradient-to-br from-slate-900 via-slate-900 to-cyan-950/40 p-5 rounded-2xl border border-slate-800 glow">
+            <span class="text-cyan-400 text-xs font-semibold tracking-wider uppercase mb-1 block">Mobile Showroom Shine</span>
+            <h2 class="text-xl font-bold text-white leading-tight">We Bring The Studio Clean To Your Doorstep</h2>
+            <p class="text-slate-400 text-xs mt-2 leading-relaxed">No hassle, no queues. Select your car size below for instant pricing and secure deposit booking.</p>
+        </div>
+
+        <!-- Step 1: Choose Vehicle Size -->
+        <div class="space-y-3">
+            <label class="text-sm font-semibold text-slate-300 flex items-center justify-between">
+                <span>1. Select Vehicle Size</span>
+                <span class="text-xs text-cyan-400 font-normal">Pricing adjusts automatically</span>
+            </label>
+            <div class="grid grid-cols-3 gap-2">
+                <button onclick="selectVehicle('small', 1.0)" id="btn-small" class="size-btn border-2 border-cyan-500 bg-cyan-950/30 text-cyan-400 p-3 rounded-xl flex flex-col items-center justify-center transition-all">
+                    <i class="fa-solid fa-car text-lg mb-1"></i>
+                    <span class="text-xs font-bold">Small</span>
+                    <span class="text-[10px] opacity-75">Hatchback</span>
+                </button>
+                <button onclick="selectVehicle('medium', 1.2)" id="btn-medium" class="size-btn border border-slate-800 bg-slate-900 text-slate-400 p-3 rounded-xl flex flex-col items-center justify-center transition-all">
+                    <i class="fa-solid fa-car-side text-lg mb-1"></i>
+                    <span class="text-xs font-bold">Medium</span>
+                    <span class="text-[10px] opacity-75">Saloon/Estate</span>
+                </button>
+                <button onclick="selectVehicle('large', 1.4)" id="btn-large" class="size-btn border border-slate-800 bg-slate-900 text-slate-400 p-3 rounded-xl flex flex-col items-center justify-center transition-all">
+                    <i class="fa-solid fa-truck-pickup text-lg mb-1"></i>
+                    <span class="text-xs font-bold">Large</span>
+                    <span class="text-[10px] opacity-75">SUV / 4x4</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Step 2: Choose Package -->
+        <div class="space-y-3">
+            <label class="text-sm font-semibold text-slate-300">2. Select Valeting Package</label>
+            
+            <div onclick="selectPackage('maintenance', 40)" id="pkg-maintenance" class="pkg-card cursor-pointer border-2 border-cyan-500 bg-slate-900 p-4 rounded-2xl transition-all">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-white text-sm">Mini Valet Maintenance</h3>
+                        <p class="text-xs text-slate-400 mt-1">Safe wash, wheel clean, glass polish, vacuum & dash wipe down.</p>
+                    </div>
+                    <span class="text-cyan-400 font-bold text-base price-display" data-base="40">£40</span>
+                </div>
+            </div>
+
+            <div onclick="selectPackage('deep', 70)" id="pkg-deep" class="pkg-card cursor-pointer border border-slate-800 bg-slate-900 p-4 rounded-2xl transition-all">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h3 class="font-bold text-white text-sm">Full Deep Clean Valet</h3>
+                            <span class="bg-amber-500/10 text-amber-400 text-[10px] px-2 py-0.5 rounded font-semibold border border-amber-500/20">Popular</span>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-1">Full interior shampoo/steam, liquid wax protection, iron fallout treatment.</p>
+                    </div>
+                    <span class="text-slate-300 font-bold text-base price-display" data-base="70">£70</span>
+                </div>
+            </div>
+
+            <div onclick="selectPackage('ceramic', 120)" id="pkg-ceramic" class="pkg-card cursor-pointer border border-slate-800 bg-slate-900 p-4 rounded-2xl transition-all">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-white text-sm">Signature Ceramic Detail</h3>
+                        <p class="text-xs text-slate-400 mt-1">Single-stage paint polish, 12-month ceramic sealant, full leather restore.</p>
+                    </div>
+                    <span class="text-slate-300 font-bold text-base price-display" data-base="120">£120</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Add-Ons -->
+        <div class="space-y-3">
+            <label class="text-sm font-semibold text-slate-300">3. Optional Upgrades</label>
+            <div class="space-y-2">
+                <label class="flex items-center justify-between p-3 rounded-xl bg-slate-900 border border-slate-800 cursor-pointer">
+                    <span class="flex items-center gap-2 text-xs text-slate-300">
+                        <input type="checkbox" onchange="calculateTotal()" value="15" class="addon-checkbox rounded border-slate-700 bg-slate-800 text-cyan-500 focus:ring-0">
+                        Pet Hair Removal
+                    </span>
+                    <span class="text-xs text-slate-400 font-semibold">+£15</span>
+                </label>
+                <label class="flex items-center justify-between p-3 rounded-xl bg-slate-900 border border-slate-800 cursor-pointer">
+                    <span class="flex items-center gap-2 text-xs text-slate-300">
+                        <input type="checkbox" onchange="calculateTotal()" value="20" class="addon-checkbox rounded border-slate-700 bg-slate-800 text-cyan-500 focus:ring-0">
+                        Engine Bay Detail
+                    </span>
+                    <span class="text-xs text-slate-400 font-semibold">+£20</span>
+                </label>
+            </div>
+        </div>
+
+        <!-- Booking Summary & Deposit Calculator -->
+        <div class="bg-slate-900 p-5 rounded-2xl border border-cyan-500/30 space-y-4">
+            <div class="flex justify-between items-center pb-3 border-b border-slate-800">
+                <div>
+                    <p class="text-xs text-slate-400">Total Price Estimate</p>
+                    <p id="total-price" class="text-2xl font-black text-white">£40.00</p>
+                </div>
+                <div class="text-right">
+                    <p class="text-xs text-cyan-400 font-semibold">Deposit Due Now (25%)</p>
+                    <p id="deposit-price" class="text-2xl font-black text-cyan-400">£10.00</p>
+                </div>
+            </div>
+
+            <form onsubmit="handleBooking(event)" class="space-y-3">
+                <div>
+                    <input type="text" required placeholder="Your Name" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:border-cyan-500 outline-none">
+                </div>
+                <div>
+                    <input type="tel" required placeholder="Phone / WhatsApp Number" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:border-cyan-500 outline-none">
+                </div>
+                <div>
+                    <input type="text" required placeholder="Postcode / Address (Stanley area)" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:border-cyan-500 outline-none">
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold py-3.5 rounded-xl shadow-lg shadow-cyan-500/20 text-sm transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-lock"></i> Reserve Slot & Pay Deposit
+                </button>
+            </form>
+            <p class="text-[10px] text-center text-slate-500">🔒 Demo built by DH9 Digital. Fully customizable booking flow.</p>
+        </div>
+
+    </main>
+
+    <script>
+        let selectedMultiplier = 1.0;
+        let selectedPackageBase = 40;
+
+        function selectVehicle(size, multiplier) {
+            selectedMultiplier = multiplier;
+            document.querySelectorAll('.size-btn').forEach(btn => {
+                btn.classList.remove('border-cyan-500', 'bg-cyan-950/30', 'text-cyan-400');
+                btn.classList.add('border-slate-800', 'bg-slate-900', 'text-slate-400');
+            });
+            const activeBtn = document.getElementById('btn-' + size);
+            activeBtn.classList.remove('border-slate-800', 'bg-slate-900', 'text-slate-400');
+            activeBtn.classList.add('border-cyan-500', 'bg-cyan-950/30', 'text-cyan-400');
+
+            updatePrices();
+            calculateTotal();
+        }
+
+        function selectPackage(id, basePrice) {
+            selectedPackageBase = basePrice;
+            document.querySelectorAll('.pkg-card').forEach(card => {
+                card.classList.remove('border-cyan-500');
+                card.classList.add('border-slate-800');
+            });
+            const activeCard = document.getElementById('pkg-' + id);
+            activeCard.classList.remove('border-slate-800');
+            activeCard.classList.add('border-cyan-500');
+
+            calculateTotal();
+        }
+
+        function updatePrices() {
+            document.querySelectorAll('.price-display').forEach(el => {
+                const base = parseFloat(el.getAttribute('data-base'));
+                el.innerText = '£' + Math.round(base * selectedMultiplier);
+            });
+        }
+
+        function calculateTotal() {
+            let total = selectedPackageBase * selectedMultiplier;
+            document.querySelectorAll('.addon-checkbox:checked').forEach(cb => {
+                total += parseFloat(cb.value);
+            });
+            const deposit = total * 0.25;
+
+            document.getElementById('total-price').innerText = '£' + total.toFixed(2);
+            document.getElementById('deposit-price').innerText = '£' + deposit.toFixed(2);
+        }
+
+        function handleBooking(e) {
+            e.preventDefault();
+            alert('Demo Request Received! On a live site, this secures the slot and redirects to Stripe for the £' + document.getElementById('deposit-price').innerText + ' deposit.');
+        }
+    </script>
+</body>
+</html>
